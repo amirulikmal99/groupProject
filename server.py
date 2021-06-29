@@ -1,7 +1,6 @@
 import socket
 import os
 import sys
-import json
 import random
 import errno
 import math
@@ -16,8 +15,8 @@ def process_start(s_sock):
 
         #process/calculation
         try:
-            menu, num , value = data.split(":")
-            opt = str(menu)
+            bundle, num , value = data.split(":")
+            opt = str(bundle)
             qty = int(num)
             prc = float(value)
 
@@ -25,30 +24,37 @@ def process_start(s_sock):
                 opt = 'Kemeja'
                 prc = 5.3
                 ans = qty * (prc)
+
             elif opt[0] == 'B':
                 opt = 'Tshirt'
                 prc = 6
                 ans = qty * (prc)
+
             elif opt[0] == 'C':
                 opt = 'Jacket'
                 prc = 7
                 ans = qty * (prc)
+
             elif opt[0] == 'D':
                 opt = 'Hoodie'
                 prc = 6
                 ans = qty * (prc)
+
             elif opt[0] == 'E':
                 opt = 'Seluar Jeans'
                 prc = 5
                 ans = qty * (prc)
-             elif opt[0] == 'F':
+
+            elif opt[0] == 'F':
                 opt = 'Seluar slack'
                 prc = 3
                 ans = qty * (prc)
+
             elif opt[0] == 'G':
                 opt = 'Seluar Track'
                 prc = 3.50
                 ans = qty * (prc)
+
             elif opt[0] == 'H':
                 opt = 'Topi'
                 prc = 3.80
@@ -56,15 +62,17 @@ def process_start(s_sock):
             else:
                 ans = ('ERROR')
 
-            sendtoCli = (str(opt)+ '.... RM'+ str(prc)+ ' ['+ str(qty) + ']: RM' + str(ans))
+            sendToClient = (str(opt)+ '.... RM'+ str(prc)+ ' ['+ str(qty) + ']: RM' + str(ans))
             sendClient = ans
-            print(sendtoCli)
+            print(sendToClient)
             print ('ORDER RECEIVED!!')
             #break
+
         except:
             print ('Connection Terminated')
-            sendtoCli = ('Connection Terminated')
+            sendToClient = ('Connection Terminated')
             break
+
         if not data:
             break
 
