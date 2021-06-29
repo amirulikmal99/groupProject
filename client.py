@@ -97,6 +97,7 @@ while True:
             tot = total
             print("Total Price (RM):" + str(tot))
 
+
         delivery = input('\nDeliver Option - [A]COD [B]POSTAGE[+RM 5.00]: ')
         if delivery == "A":
            print("COD\n")
