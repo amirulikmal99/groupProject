@@ -55,16 +55,13 @@ def process_start(s_sock):
                 prc = 3.50
                 ans = qty * (prc)
 
-            elif opt[0] == 'H':
-                opt = 'Topi'
-                prc = 3.80
-                ans = qty * (prc)
             else:
                 ans = ('ERROR')
 
-            sendToClient = (str(opt)+ '.... RM'+ str(prc)+ ' ['+ str(qty) + ']: RM' + str(ans))
+            calculate = (str(opt)+ '.... RM'+ str(prc)+ ' ['+ str(qty) + ']: RM' + str(ans))
             sendClient = ans
-            print(sendToClient)
+            keClient = str(opt)
+            print(calculate)
             print ('ORDER RECEIVED!!')
             #break
 
@@ -77,6 +74,7 @@ def process_start(s_sock):
             break
 
         s_sock.send(str.encode(str(sendClient)))
+        s_sock.send(str.encode(str(keClient)))
     s_sock.close()
 
 if __name__ == '__main__':
