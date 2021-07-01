@@ -3,12 +3,14 @@ import signal
 import sys
 
 socket = socket.socket()
-host = '192.168.56.104'
+host = '192.168.114.6'
 port = 8888
 
 print('Waiting for connection...')
+
 try:
         socket.connect((host, port))
+
 except socket.error as e:
         print(str(e))
 
@@ -74,6 +76,28 @@ while True:
         else:
            print("WRONG INPUT SIZE!!!\n")
            break
+
+        add = input('\nAdd Onn (Y/N): ')
+        if add == "Y":
+         addon = input('We have [A]Face Mask | [B]Lanyard | [C]Mafla\nChoose your Add on (A/B/C): ')
+         if addon == "A":
+          print("Face Mask[+RM15.00]\n")
+          total +=  15.00
+
+         elif addon == "B":
+          print("Lanyard[+RM10.00]\n")
+          total += 10.00
+
+         elif addon == "C":
+          print("Mafla[+RM20.00]\n")
+          total += 20.00
+
+         else:
+          print("WRONG ADD ONN!!!")
+          break
+
+        else:
+         print("No Add On\n")
 
 
         member = input('\nMembership (Y/N)?: ')
