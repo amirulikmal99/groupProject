@@ -148,8 +148,6 @@ while True:
 
     else:
         print("WRONG INPUT, TRY AGAIN!!")
-        socket.send(str.encode(keServer))
-        Response = socket.recv(1024)
-        print(Response.decode("utf-8"))
+        break
 
 socket.close()
