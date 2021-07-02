@@ -1,0 +1,6 @@
+name, prod, saiz, add, ahli, hantar, address, total 
+Ahmad bin Ali ,b'Kemeja' ,S
+ ,Lanyard [+10.00]
+Member [-30%]
+ ,Postage [RM5.00]
+ ,123, Taman Indah, Segamat ,90.0
