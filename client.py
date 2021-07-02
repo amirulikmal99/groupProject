@@ -3,7 +3,7 @@ import signal
 import sys
 
 socket = socket.socket()
-host = '192.168.56.103'
+host = '192.168.56.104'
 port = 8888
 
 print('Waiting for connection...')
@@ -19,7 +19,7 @@ Response = socket.recv(2048)
 print(Response.decode("utf-8"))
 
 print ( "\n============================================================================\n"
-                 "\t* *** *** ***WELCOME TO AIM'S BUNDLE ONLINE SHOP *** **** *** *\t\t\t\n"
+               "      * *** *** ***WELCOME TO AIM'S BUNDLE ONLINE SHOP *** **** *** *\t\t\t\n"
                         "============================================================================\n");
 
 print("   --------------------------------------------------------------------------")
@@ -82,6 +82,7 @@ while True:
         add = input('\nAdd Onn [+RM 10.00] (Y/N): ')
         if add == "Y":
          addon = input('We have [A]Face Mask | [B]Lanyard | [C]Mafla\nChoose your Add on (A/B/C): ')
+
          if addon == "A":
           add = "Face Mask [+RM10.00]\n"
           total +=  10.00
@@ -120,27 +121,33 @@ while True:
         delivery = input('\nDeliver Option - [A]COD  [B]POSTAGE[+RM 5.00]: ')
         if delivery == "A":
            hantar = "COD\n"
+           address = input('\nEnter your home address: ')
            print("Total to Pay: RM " + str(tot))
 
         elif delivery == "B":
            hantar = "Postage [RM5.00]\n"
            tot += 5.00
+           address = input('\nEnter your home address: ')
            print("Total to Pay: RM " + str(tot))
+           print("\nOur Account Number: AIM Bundle - 1234567891011 (Bank Islam) \nPlease send the transaction receipt to us after transfer the money \nThank You ^^")
 
         else:
            hantar = "Postage [RM5.00]\n"
            tot += 5.00
+           address = input('\nEnter your home address: ')
            print("Total to Pay: RM " + str(tot))
+           print("\nOur Account Number: AIM Bundle - 1234567891011 (Bank Islam) \nPlease send the transaction receipt to us after transfer the money \nThank You ^^")
 
-        
-        print("\n\t\t\t*****RECEIPT*****\n")
+
+        print("\n\t\t\t*******RECEIPT*******\n")
+        print("\t\t\t AIMS'S ONLINE BUNDLE")
         print("\t\t\tITEM: " + prod)
         print("\t\t\tSIZE: " + saiz)
         print("\t\t\tADD-ON: " + add)
         print("\t\t\tMEMBERSHIP: " + ahli)
         print("\t\t\tDELIVERY: " + hantar)
         print("\t\t\tTotal to Pay: RM " + str(tot) + "\n")
-        print("\t\t\t*****THANK YOU*****\n")
+        print("\n\t\t\t*******THANK YOU*******\n")
 
     elif opt == 'X':
         print('YOUR ORDER HAS BEEN SUCCESFULLY RECORDED..\nTHANK YOU FOR YOUR ORDER :)')
