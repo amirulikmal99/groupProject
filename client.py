@@ -177,7 +177,7 @@ while True:
         print("WRONG INPUT, TRY AGAIN!!")
         break
 
-write = name + ' ,' + str(prod) + ' ,' + str(saiz) + ' ,' + str(add) + str(ahli) + ' ,' + str(hantar) + ' ,' + str(address) + ' ,' + str(total) + '\n'
+write = '\n' + name + '| ' + str(prod) + '| ' + str(saiz) + '| ' + str(add) + '|' +  str(ahli) + '| ' + str(hantar) + '| ' + str(address) + '| ' + str(total) + '\n'
 file.write(write)
 file.close
 

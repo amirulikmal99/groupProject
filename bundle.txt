@@ -1,6 +1,16 @@
 name, prod, saiz, add, ahli, hantar, address, total 
-Ahmad bin Ali ,b'Kemeja' ,S
- ,Lanyard [+10.00]
-Member [-30%]
- ,Postage [RM5.00]
- ,123, Taman Indah, Segamat ,90.0
+Ahmad bin Ali ,b'Kemeja' ,S, Lanyard [+10.00], Member [-30%],Postage [RM5.00], 123, Taman Indah, Segamat ,90.0
+
+Amirul bin Azman| b'Kemeja'| XL [+RM10.00]| Face Mask [+RM10.00]| Member [-30%]| Postage [RM5.00]| No 123, Taman Megah, Johor| 140.0
+
+Imran bin Abu| b'Kemeja'| L
+| Face Mask [+RM10.00]
+|Non-Member
+| COD
+| 101, Taman Astakona, Johor| 50.0
+
+Abu bin Kasim| b'Kemeja'| XL [+RM10.00]
+| No Add On
+|Member [-30%]
+| Postage [RM5.00]
+| 11, Taman Indah, Johor| 50.0
