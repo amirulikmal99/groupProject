@@ -8,7 +8,7 @@ from multiprocessing import Process
 
 def process_start(s_sock):
 
-    s_sock.send(str.encode('\n\t\t\t\t*#*#*AIMS BUNDLE COLLECTION*#*#*\t\t\t'))
+    s_sock.send(str.encode('\n\t\t*#*#*AIMS BUNDLE COLLECTION*#*#*\t\t\t'))
     while True:
         data = s_sock.recv(2048)
         data = data.decode("utf-8")
@@ -20,39 +20,39 @@ def process_start(s_sock):
             qty = int(num)
             prc = float(value)
 
-            if opt[0]  == 'A':
+            if opt[0]  == 'A' or 'a':
                 opt = 'Kemeja'
-                prc = 5.3
+                prc = 40
                 ans = qty * (prc)
 
-            elif opt[0] == 'B':
+            elif opt[0] == 'B' or 'b':
                 opt = 'Tshirt'
-                prc = 6
+                prc = 30
                 ans = qty * (prc)
 
-            elif opt[0] == 'C':
+            elif opt[0] == 'C' or 'c':
                 opt = 'Jacket'
-                prc = 7
+                prc = 90
                 ans = qty * (prc)
 
-            elif opt[0] == 'D':
+            elif opt[0] == 'D' or 'd':
                 opt = 'Hoodie'
-                prc = 6
+                prc = 70
                 ans = qty * (prc)
 
-            elif opt[0] == 'E':
+            elif opt[0] == 'E' or 'e':
                 opt = 'Seluar Jeans'
-                prc = 5
+                prc = 45
                 ans = qty * (prc)
 
-            elif opt[0] == 'F':
-                opt = 'Seluar slack'
-                prc = 3
+            elif opt[0] == 'F' or 'f':
+                opt = 'Seluar Slack'
+                prc = 45
                 ans = qty * (prc)
 
-            elif opt[0] == 'G':
+            elif opt[0] == 'G' or 'g':
                 opt = 'Seluar Track'
-                prc = 3.50
+                prc = 25
                 ans = qty * (prc)
 
             else:
