@@ -1,7 +1,7 @@
 Sales Record 
 
-Ali| b'Kemeja'| L
-| Mafla [+10.00]
+Amirul| b'Jacket'| 3| 3XL [+10.00]
+| Lanyard [+10.00]
 |Member [-30%]
 | Postage [RM5.00]
-| Muar| 90.0
+| Muar| 222.0
