@@ -19,7 +19,7 @@ try:
 
 except :
         file = open(r'bundle.txt', 'w')
-        file.write('name, prod, saiz, add, ahli, hantar, address, total \n')
+        file.write('Sales Record \n')
         file.close()
         file = open(r'bundle.txt', 'r')
 
@@ -159,12 +159,12 @@ while True:
         print("\n\t\t\t*********RECEIPT*********\n")
         print("\t\t\t AIMS'S ONLINE BUNDLE")
         print("\t\t\tNAME: " + name)
+        print("\t\t\tHOME ADDRESS: " + address)
         print("\n\t\t\tITEM: " + prod)
         print("\t\t\tSIZE: " + saiz)
         print("\t\t\tADD-ON: " + add)
         print("\t\t\tMEMBERSHIP: " + ahli)
         print("\t\t\tDELIVERY: " + hantar)
-        print("\t\t\tHOME ADDRESS: " + address)
         print("\t\t\tTotal to Pay: RM " + str(tot) + "\n")
         print("\t\t\tOur Account Number: AIM Bundle - 1234567891011 (Bank Islam) \n\t\t\tPlease send the transaction receipt to us after transfer the money")
         print("\n\t\t\t*********THANK YOU*********\n")
