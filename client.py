@@ -3,7 +3,7 @@ import signal
 import sys
 
 socket = socket.socket()
-host = '192.168.56.104'
+host = '192.168.56.103'
 port = 8888
 
 print('Waiting for connection...')
@@ -51,16 +51,18 @@ print("=========================================================================
 
 while True:
     opt = input('\nSelect Your Option [Code Bundle] Press "X" if you are done..\n> ')
-    if opt == "A" or opt == "a" or opt == "B" or opt == "b" or opt == "C" or opt == "c" or opt == "D" or opt == "d" or opt == "E" or opt == "e" or opt == "F" or opt == "f" or opt == "G" or opt == "g":
+    if opt == "A" or opt == "B" or opt == "C" or opt == "D" or opt == "E" or opt == "F" or opt == "G":
         qty = input("\nQuantity per Order: ")
         prc = '0.00'
         total = 0.00
         keServer = opt + ":" + qty + ":" + prc
         socket.send(str.encode(keServer))
+        
         price = socket.recv(1024)
         price = float(price)
         prod = socket.recv(1024)
         prod = str(prod)
+        quantity = int(qty)
 
         size = input ('We have S/M/L/XL/2XL/3XL size. If size XL-->3XL, add RM10.00 \nChoose your size: ')
         if size == "S":
@@ -77,15 +79,15 @@ while True:
 
         elif size == "XL":
            saiz = "XL [+RM10.00]\n"
-           total = price + 10.00
+           total = price + (10.00 * quantity)
 
         elif size == "2XL":
            saiz = "2XL [+RM10.00]\n"
-           total = price + 10.00
+           total = price + (10.00 * quantity)
 
         elif size == "3XL":
            saiz = "3XL [+10.00]\n"
-           total = price + 10.00
+           total = price + (10.00 * quantity)
 
 
         else:
@@ -161,6 +163,7 @@ while True:
         print("\t\t\tNAME: " + name)
         print("\t\t\tHOME ADDRESS: " + address)
         print("\n\t\t\tITEM: " + prod)
+        print("\t\t\tQUANTITY: " + str(quantity))
         print("\t\t\tSIZE: " + saiz)
         print("\t\t\tADD-ON: " + add)
         print("\t\t\tMEMBERSHIP: " + ahli)
@@ -177,7 +180,7 @@ while True:
         print("WRONG INPUT, TRY AGAIN!!")
         break
 
-write = '\n' + name + '| ' + str(prod) + '| ' + str(saiz) + '| ' + str(add) + '|' +  str(ahli) + '| ' + str(hantar) + '| ' + str(address) + '| ' + str(total) + '\n'
+write = '\n' + name + '| ' + str(prod) + '| ' + str(quantity) + '| ' + str(saiz) + '| ' + str(add) + '|' +  str(ahli) + '| ' + str(hantar) + '| ' + str(address) + '| ' + str(tot) + '\n'
 file.write(write)
 file.close
 
