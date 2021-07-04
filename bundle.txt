@@ -1,7 +1,7 @@
 Sales Record 
 
-Amirul| b'Jacket'| 3| 3XL [+10.00]
-| Lanyard [+10.00]
+Amirul| b'Kemeja'| 2| 3XL [+10.00]
+| Face Mask [+RM10.00]
 |Member [-30%]
 | Postage [RM5.00]
-| Muar| 222.0
+| Muar| 82.0
