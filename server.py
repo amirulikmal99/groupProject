@@ -58,7 +58,7 @@ def process_start(s_sock):
             else:
                 ans = ('ERROR')
 
-            calculate = (str(opt)+ '.... RM'+ str(prc)+ ' ['+ str(qty) + ']: RM' + str(ans))
+            calculate = (str(opt)+ '.... RM'+ str(prc)+ '['+ str(qty) + ']: RM' + str(ans))
             sendClient = ans
             keClient = str(opt)
             print(calculate)
